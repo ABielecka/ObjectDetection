@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectDetectionAn", "ObjectDetectionAn\ObjectDetectionAn.csproj", "{426E1704-B721-41B9-BCA0-6D2F52E5D3BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeasureTest", "MeasureTest\MeasureTest.csproj", "{0780EDF1-A599-4240-B904-05C43331626D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{426E1704-B721-41B9-BCA0-6D2F52E5D3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426E1704-B721-41B9-BCA0-6D2F52E5D3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426E1704-B721-41B9-BCA0-6D2F52E5D3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426E1704-B721-41B9-BCA0-6D2F52E5D3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0780EDF1-A599-4240-B904-05C43331626D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0780EDF1-A599-4240-B904-05C43331626D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0780EDF1-A599-4240-B904-05C43331626D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0780EDF1-A599-4240-B904-05C43331626D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AE85AE0-4369-4D6B-A598-20213055E5BA}
+	EndGlobalSection
+EndGlobal

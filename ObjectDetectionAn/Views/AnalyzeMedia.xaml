@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ObjectDetectionAn.Views.MediaAnalyzer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:ObjectDetectionAn.Views"
+       mc:Ignorable="d" Loaded="UserControl_Loaded" Foreground="Black" Background="White" Height="611.01" Width="799">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../WPFControls.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Rectangle Fill="#FFC9C9CF" HorizontalAlignment="Left" Height="66" Stroke="White" VerticalAlignment="Top" Width="800" Margin="0,0,-1,0"/>
+
+        <!--<Image x:Name="imgOrig" Margin="10,161,419,10" Width="370"  Source="{Binding ImageOriginal}"/>-->
+        <Image x:Name="imgAn"   Margin="10,161,10,10" Source="{Binding ImageAnalyzed, Mode=TwoWay}"/>
+        <!--<MediaElement x:Name="vidOrig" Margin="10,161,401,10" LoadedBehavior="Manual" MediaEnded="vidOrig_MediaEnded" Source="{Binding VideoOriginal}"/>-->
+
+        <RadioButton x:Name="rbImage" Content="Image" HorizontalAlignment="Left" Margin="14,75,0,0" VerticalAlignment="Top"   IsChecked="{Binding RadioImage}"/>
+        <RadioButton x:Name="rbVideo" Content="Video" HorizontalAlignment="Left" Margin="14,101,0,0" VerticalAlignment="Top"   IsChecked="{Binding RadioVideo}"/>
+        <RadioButton x:Name="rbCamera" Content="Camera" HorizontalAlignment="Left" Margin="14,127,0,0" VerticalAlignment="Top" IsChecked="{Binding RadioCamera}"/>
+
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="632,123,0,0" VerticalAlignment="Top" Width="75" Command="{Binding AddMedia}" />
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="712,123,0,0" VerticalAlignment="Top" Width="75" Command="{Binding StopMedia}"/>
+
+        <ComboBox x:Name="cbCamera" HorizontalAlignment="Left" Margin="78,119,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding CameraIndex}" SelectedItem="{Binding SelectedCamera}"/>
+        <Label Content="SubscriptionKey" HorizontalAlignment="Left" Margin="6,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="90" FontSize="10"/>
+        <Label Content="Endpoint" HorizontalAlignment="Left" Margin="381,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="54" FontSize="10"/>
+
+        <TextBox x:Name="tbKey" HorizontalAlignment="Left" Height="19" Margin="101,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Text="{Binding SubscriptionKey, Mode=TwoWay}"/>
+        <TextBox x:Name="tbEnd" HorizontalAlignment="Left" Height="19" Margin="440,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Text="{Binding Endpoint, Mode=TwoWay}"/>
+        <CheckBox x:Name="cbSvae" Content="Save to database?" HorizontalAlignment="Left" Margin="632,103,0,0" VerticalAlignment="Top" IsChecked="{Binding SavetoDB, Mode=TwoWay}"/>
+        <CheckBox x:Name="cbAlert" Content="Send alert?" HorizontalAlignment="Left" Margin="632,83,0,0" VerticalAlignment="Top" IsChecked="{Binding SendAlert, Mode=TwoWay}" IsEnabled="{Binding AbleSend}"/>
+        <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Margin="477,36,0,0" BorderBrush="#FFB9B9B9" FlowDirection="RightToLeft" Text="{Binding DistanceValue, Mode=TwoWay}"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Height="19" Margin="101,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Text="{Binding EmailName, Mode=TwoWay}"/>
+        <Label Content="Email address" HorizontalAlignment="Left" Margin="6,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="90" FontSize="10"/>
+        <Label Content="Minimal distance:" HorizontalAlignment="Left" Margin="381,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="22" Width="96" FontSize="10"/>
+        <Label Content="cm" HorizontalAlignment="Left" Margin="515,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="54" FontSize="10"/>
+        <Label Content="Focal lenght::" HorizontalAlignment="Left" Margin="552,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="96" FontSize="10"/>
+        <TextBox HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" Margin="632,36,0,0" BorderBrush="#FFB9B9B9" FlowDirection="RightToLeft" Text="{Binding Focal, Mode=TwoWay}"/>
+        <Label Content="pix" HorizontalAlignment="Left" Margin="666,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.553,0.308" Height="26" Width="54" FontSize="10"/>
+
+    </Grid>
+</UserControl>
